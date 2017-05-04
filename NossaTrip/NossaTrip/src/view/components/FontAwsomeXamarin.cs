@@ -1,4 +1,6 @@
-﻿namespace NossaTrip.view.components
+﻿using Xamarin.Forms;
+
+namespace NossaTrip.view.components
 {
     public static class FontAwsomeXamarin
     {
@@ -372,5 +374,18 @@
         public const string FAVimeoSquare = "\uf194";
         public const string FATry = "\uf195";
         public const string FAPlusSquareO = "\uf196";
+
+        public static string GetFontName()
+        {
+            var fontFamily = "FontAwesome";
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS: fontFamily = "FontAwesome"; break;
+                case Device.Android: fontFamily = "FontAwesome.ttf#FontAwesome"; break;
+            }
+
+            return fontFamily;
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace NossaTrip.view.pages.trip.components
     {
         public TripPageStackLayout()
         {
-            Margin = new Thickness(20, 400, 20, 0);
+            // Margin = new Thickness(20, 400, 20, 0);
         }
     }
 }

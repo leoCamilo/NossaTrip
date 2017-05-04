@@ -6,7 +6,7 @@ namespace NossaTrip.view.pages.trip.components
     {
         public TripDescriptionLabel(string description)
         {
-            Margin = new Thickness(0, 80, 0, 0);
+            Margin = new Thickness(20, 20, 20, 0);
             TextColor = Color.White;
 
             var desc_label_fs = new FormattedString();

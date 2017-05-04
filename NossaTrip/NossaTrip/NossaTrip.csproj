@@ -43,17 +43,17 @@
     <Compile Include="src\view\pages\feed\components\FeedListItem.cs" />
     <Compile Include="src\view\pages\feed\components\FeedListView.cs" />
     <Compile Include="src\view\pages\feed\FeedPage.cs" />
+    <Compile Include="src\view\pages\PageTest.cs" />
     <Compile Include="src\view\pages\place\components\DescriptionCard.cs" />
     <Compile Include="src\view\pages\place\PlacePage.cs" />
-    <Compile Include="src\view\pages\trip\components\Background.cs" />
-    <Compile Include="src\view\pages\trip\components\TripAddressLabel.cs" />
     <Compile Include="src\view\pages\trip\components\TripDescriptionLabel.cs" />
-    <Compile Include="src\view\pages\trip\components\TripFunctionsBtn.cs" />
-    <Compile Include="src\view\pages\trip\components\TripNameLabel.cs" />
+    <Compile Include="src\view\pages\trip\components\TripMainData.cs" />
     <Compile Include="src\view\pages\trip\components\TripPageComment.cs" />
     <Compile Include="src\view\pages\trip\components\TripPageStackLayout.cs" />
     <Compile Include="src\view\pages\trip\components\TripPlaceCard.cs" />
+    <Compile Include="src\view\pages\trip\components\TripScroll.cs" />
     <Compile Include="src\view\pages\trip\components\TripTagCard.cs" />
+    <Compile Include="src\view\pages\trip\components\TripTagsCard.cs" />
     <Compile Include="src\view\pages\trip\TripPage.cs" />
   </ItemGroup>
   <ItemGroup>

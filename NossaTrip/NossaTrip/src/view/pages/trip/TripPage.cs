@@ -1,5 +1,4 @@
 ﻿using NossaTrip.view.pages.trip.components;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace NossaTrip.view.pages.trip
@@ -10,39 +9,34 @@ namespace NossaTrip.view.pages.trip
         {
             NavigationPage.SetHasNavigationBar(this, false);
 
-            var layout = new AbsoluteLayout();
+            var layout = new AbsoluteLayout { BackgroundColor = Color.FromHex("#323232") };
             var info_list = new TripPageStackLayout();
+            var main_data = new TripMainData("https://s-media-cache-ak0.pinimg.com/originals/53/7b/3e/537b3e250746bb712510f81d1d241520.jpg");
+            var scroll = new TripScroll (main_data.Bg) { Content = info_list };
 
-            Background.SetLayoutBackground(layout, "https://s-media-cache-ak0.pinimg.com/originals/53/7b/3e/537b3e250746bb712510f81d1d241520.jpg");            
-
-            info_list.Children.Add(new TripNameLabel("Best U.S.A Trip =)"));
-            info_list.Children.Add(new TripAddressLabel("New York, USA"));
-            info_list.Children.Add(new TripFunctionsBtn());
+            info_list.Children.Add(main_data);
             info_list.Children.Add(new TripDescriptionLabel("Conhecer Nova Iorque é um sonho, uma viagem onde você traz as histórias dos filmes para dentro de sua realidade. Tudo é muito incrível em Nova Yorque e existem inúmeros pontos turísticos.\n\nEm minha viagem aos Estados Unidos, eu me hospedei na cidade de Farfield que fica em um estado vizinho, chamado Connecticut.A cidade é pequena e linda, muito arborizada e muito bem cuidada, uma cidade com muitas residências e poucos comércios.\n\nMesmo sendo em outro estado, Farfield pertence a região metropolitana de Nova Yorque, então meu ponto de partida foi a Estação Central de Nova Yorque que por si só já é uma atração turística.\n\nA estação é muito grande e possui várias lojas, cafés e lanchonetes e lá eu encontrei também uma loja da Apple. Através desta estação é possível viajar para várias cidades dos Estados Unidos, com trens partindo de cinco em cinco."));
 
             var tags_label = new Label
             {
-                Margin = new Thickness(0, 20, 0, 0),
+                Margin = new Thickness(20, 20, 0, 0),
                 Text = "tags:",
                 TextColor = Color.White
             };
 
             info_list.Children.Add(tags_label);
+            info_list.Children.Add(new TripTagCard("cold"));
+            info_list.Children.Add(new TripTagCard("NYC"));
+            info_list.Children.Add(new TripTagCard("America"));
+            info_list.Children.Add(new TripTagCard("North America"));
+            info_list.Children.Add(new TripTagCard("USA"));
+            info_list.Children.Add(new TripTagCard("new york"));
 
-            var tag_stack = new StackLayout();
-
-            tag_stack.Children.Add(new TripTagCard("cold"));
-            tag_stack.Children.Add(new TripTagCard("NYC"));
-            tag_stack.Children.Add(new TripTagCard("America"));
-            tag_stack.Children.Add(new TripTagCard("North America"));
-            tag_stack.Children.Add(new TripTagCard("USA"));
-            tag_stack.Children.Add(new TripTagCard("new york"));
-
-            info_list.Children.Add(tag_stack);
+            // info_list.Children.Add(new TripTagsCard("cold|NYC|America|North America|USA|new york|city|metropole|people|stores"));
 
             var places_label = new Label
             {
-                Margin = new Thickness(0, 20, 0, 0),
+                Margin = new Thickness(20, 20, 0, 0),
                 Text = "places:",
                 TextColor = Color.White
             };
@@ -58,7 +52,7 @@ namespace NossaTrip.view.pages.trip
 
             var map_label = new Label
             {
-                Margin = new Thickness(0, 20, 0, 0),
+                Margin = new Thickness(20, 20, 0, 0),
                 Text = "map:",
                 TextColor = Color.White
             };
@@ -67,12 +61,12 @@ namespace NossaTrip.view.pages.trip
 
             info_list.Children.Add(new Image {
                 Source = "http://www.droid-life.com/wp-content/uploads/2016/09/google-maps.jpg",
-
+                Margin = new Thickness(20, 0)
             });
 
             var comments_label = new Label
             {
-                Margin = new Thickness(0, 20, 0, 0),
+                Margin = new Thickness(20, 20, 0, 0),
                 Text = "comments:",
                 TextColor = Color.White
             };
@@ -89,10 +83,6 @@ namespace NossaTrip.view.pages.trip
 
             info_list.Children.Add(new Entry { Placeholder = "comment...", PlaceholderColor = Color.FromHex("#ededed"), TextColor = Color.White });
 
-            var scroll = new ScrollView();
-            scroll.Content = info_list;
-
-            
             AbsoluteLayout.SetLayoutBounds(scroll, new Rectangle(0, 0, 1, 1));
             AbsoluteLayout.SetLayoutFlags(scroll, AbsoluteLayoutFlags.SizeProportional);
 

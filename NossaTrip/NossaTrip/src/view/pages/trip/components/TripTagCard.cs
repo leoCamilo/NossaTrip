@@ -16,7 +16,7 @@ namespace NossaTrip.view.pages.trip.components
             };
 
             HasShadow = false;
-            Margin = new Thickness(10, 0, 0, 0);
+            Margin = new Thickness(30, 0, 20, 0);
             Padding = 3;
             Content = tag_label;
             BackgroundColor = Color.FromRgb(_rnd.Next(100, 200), _rnd.Next(100, 200), _rnd.Next(100, 200));

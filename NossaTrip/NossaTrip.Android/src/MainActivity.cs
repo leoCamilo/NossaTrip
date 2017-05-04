@@ -23,6 +23,13 @@ namespace NossaTrip.Droid
 
             base.OnCreate(bundle);
 
+            var width = Resources.DisplayMetrics.WidthPixels;
+            var height = Resources.DisplayMetrics.HeightPixels;
+            var density = Resources.DisplayMetrics.Density;
+
+            App.ScreenWidth = (width - 0.5f) / density;
+            App.ScreenHeight = (height - 0.5f) / density;
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }

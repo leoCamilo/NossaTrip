@@ -1,4 +1,5 @@
 ﻿using NossaTrip.view.components;
+using NossaTrip.view.pages.place;
 using Xamarin.Forms;
 
 namespace NossaTrip.view.pages.trip.components
@@ -8,7 +9,8 @@ namespace NossaTrip.view.pages.trip.components
         public TripPlaceCard(string place, string url)
         {
             BackgroundColor = Color.FromHex("#ededed");
-            Margin = new Thickness(0, 0, 0, 30);
+
+            Margin = new Thickness(20, 0, 20, 30);
             RowSpacing = 1;
 
             ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
@@ -26,7 +28,7 @@ namespace NossaTrip.view.pages.trip.components
             var likes = new Label
             {
                 Text = FontAwsomeXamarin.FAHeartO + " 1,231",
-                FontFamily = Device.OnPlatform("FontAwesome", "FontAwesome.ttf#FontAwesome", null),
+                FontFamily = FontAwsomeXamarin.GetFontName(),
                 Margin = 6,
                 HorizontalTextAlignment = TextAlignment.End,
                 FontSize = 15
@@ -43,6 +45,15 @@ namespace NossaTrip.view.pages.trip.components
             Children.Add(likes, 1, 1);
 
             SetColumnSpan(img, 2);
+
+            var tgr = new TapGestureRecognizer();
+
+            tgr.Tapped += (sender, e) =>
+            {
+                Navigation.PushModalAsync(new PlacePage());
+            };
+
+            GestureRecognizers.Add(tgr);
         }
     }
 }

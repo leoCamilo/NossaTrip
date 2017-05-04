@@ -6,6 +6,8 @@ namespace NossaTrip.view.pages.trip.components
     {
         public TripPageComment(string comment)
         {
+            Margin = new Thickness(20, 0);
+
             ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(60, GridUnitType.Absolute) });
             ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
 

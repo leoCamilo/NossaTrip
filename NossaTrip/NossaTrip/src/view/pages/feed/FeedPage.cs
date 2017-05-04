@@ -20,7 +20,7 @@ namespace NossaTrip.view.pages.feed
 
             listView.ItemTapped += (sender, e) => {
                 ((ListView)sender).SelectedItem = null;
-                Navigation.PushAsync(new PlacePage(), true);
+                Navigation.PushModalAsync(new TripPage());
             };
 
             BackgroundImage = "feed__bg.jpg";
