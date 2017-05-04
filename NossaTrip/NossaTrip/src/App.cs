@@ -1,6 +1,5 @@
-﻿using NossaTrip.view.pages;
+﻿using NossaTrip.src.view.pages.login;
 using NossaTrip.view.pages.feed;
-using NossaTrip.view.pages.trip;
 using Xamarin.Forms;
 
 namespace NossaTrip
@@ -12,8 +11,12 @@ namespace NossaTrip
 
         public App()
         {
+            MainPage = new LoginPage();
+        }
+
+        public void GetIn()
+        {
             MainPage = new NavigationPage(new FeedPage { Title = "NossaTrip" });
-            // MainPage = new NavigationPage(new TripPage());
         }
 
         protected override void OnStart()

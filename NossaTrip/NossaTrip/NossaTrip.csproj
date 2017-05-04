@@ -43,6 +43,9 @@
     <Compile Include="src\view\pages\feed\components\FeedListItem.cs" />
     <Compile Include="src\view\pages\feed\components\FeedListView.cs" />
     <Compile Include="src\view\pages\feed\FeedPage.cs" />
+    <Compile Include="src\view\pages\login\components\CustomShape.cs" />
+    <Compile Include="src\view\pages\login\components\LoginEntry.cs" />
+    <Compile Include="src\view\pages\login\LoginPage.cs" />
     <Compile Include="src\view\pages\PageTest.cs" />
     <Compile Include="src\view\pages\place\components\DescriptionCard.cs" />
     <Compile Include="src\view\pages\place\PlacePage.cs" />
