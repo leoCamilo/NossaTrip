@@ -1,4 +1,4 @@
-﻿using NossaTrip.src.view.pages.login;
+﻿using NossaTrip.view.pages.basepage;
 using NossaTrip.view.pages.feed;
 using Xamarin.Forms;
 
@@ -11,7 +11,8 @@ namespace NossaTrip
 
         public App()
         {
-            MainPage = new LoginPage();
+            // MainPage = new LoginPage();
+            MainPage = new BasePage();
         }
 
         public void GetIn()

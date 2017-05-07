@@ -1,4 +1,6 @@
-﻿using NossaTrip.view.components;
+﻿using NossaTrip.control.controllers.trip;
+using NossaTrip.view.components;
+using System;
 using Xamarin.Forms;
 
 namespace NossaTrip.view.pages.trip.components
@@ -16,6 +18,13 @@ namespace NossaTrip.view.pages.trip.components
                 Margin = new Thickness(0, 20, 0, 0);
                 HorizontalTextAlignment = TextAlignment.Center;
                 FontFamily = FontAwsomeXamarin.GetFontName();
+            }
+
+            public void AddFunction(EventHandler e)
+            {
+                var tgr = new TapGestureRecognizer();
+                tgr.Tapped += e;
+                GestureRecognizers.Add(tgr);
             }
         }
 
@@ -64,6 +73,10 @@ namespace NossaTrip.view.pages.trip.components
             var like = new BtnLabel { Text = FontAwsomeXamarin.FAHeartO };
             var share = new BtnLabel { Text = FontAwsomeXamarin.FAShareAlt };
             var favorite = new BtnLabel { Text = FontAwsomeXamarin.FAStarO };
+
+            like.AddFunction(TripController.Like());
+            share.AddFunction(TripController.Share());
+            favorite.AddFunction(TripController.Favorite());
 
             grid.Children.Add(label, 0, 0);
             grid.Children.Add(like, 0, 1);
