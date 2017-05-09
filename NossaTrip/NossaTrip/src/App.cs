@@ -12,7 +12,7 @@ namespace NossaTrip
         public App()
         {
             // MainPage = new LoginPage();
-            MainPage = new BasePage();
+            MainPage = new NavigationPage(new BasePage { Title = "NossaTrip" });
         }
 
         public void GetIn()

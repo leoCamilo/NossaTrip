@@ -5,8 +5,10 @@ namespace NossaTrip.view.pages.feed.components
 {
     public class FeedListCell : ViewCell
     {
+
         public FeedListCell()
         {
+
             var grid = new Grid
             {
                 BackgroundColor = Color.FromHex("#dedede"),
@@ -22,12 +24,10 @@ namespace NossaTrip.view.pages.feed.components
                 Padding = 0
             };
 
-            var label = new Label { FontSize = 10 };
             var avaliation = new BoxView { Color = Color.FromHex("#52a43a") };
 
             var avatar = new Image
             {
-                Source = "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-tech-guy.png",
                 HeightRequest = 40,
                 WidthRequest = 40,
                 Margin = 10
@@ -40,20 +40,19 @@ namespace NossaTrip.view.pages.feed.components
             };
 
             var trip_label_fs = new FormattedString();
+            var trip_span = new Span { Text = "Incrivel viagem a fortaleza em 5 dias Incrivel viagem a fortaleza em 5 dias Incrivel viagem a fortaleza em 5 dias Incrivel", FontSize = 14 };
             trip_label_fs.Spans.Add(new Span { Text = "description:\n", FontSize = 10 });
-            trip_label_fs.Spans.Add(new Span { Text = "Incrivel viagem a fortaleza em 5 dias Incrivel viagem a fortaleza em 5 dias Incrivel viagem a fortaleza em 5 dias Incrivel", FontSize = 14 });
+            trip_label_fs.Spans.Add(trip_span);
             trip_label.FormattedText = trip_label_fs;
 
             var name_label = new Label
             {
-                Text = "Leonardo Camilo",
                 FontSize = 14,
                 VerticalTextAlignment = TextAlignment.Center
             };
 
             var time_label = new Label
             {
-                Text = "06:30 pm\nMay 16, 2017",
                 FontSize = 11,
                 Margin = new Thickness(10, 0, 0, 0),
                 VerticalTextAlignment = TextAlignment.Center
@@ -84,7 +83,6 @@ namespace NossaTrip.view.pages.feed.components
             var liked_label = new Label
             {
                 FontSize = 11,
-                Text = "12,442\npeople liked this",
                 Margin = new Thickness(10, 0, 0, 0),
                 VerticalTextAlignment = TextAlignment.Center,
                 HorizontalTextAlignment = TextAlignment.Center
@@ -102,7 +100,10 @@ namespace NossaTrip.view.pages.feed.components
             tags_label_fs.Spans.Add(new Span { Text = "Praia, Dunas, Nordeste", FontSize = 11 });
             tags_label.FormattedText = tags_label_fs;
 
-            label.SetBinding(Label.TextProperty, "TxtContent");
+            avatar.SetBinding(Image.SourceProperty, "Url");
+            name_label.SetBinding(Label.TextProperty, "Name");
+            time_label.SetBinding(Label.TextProperty, "Time");
+            liked_label.SetBinding(Label.TextProperty, "Likes");
 
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(10, GridUnitType.Absolute) });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(60, GridUnitType.Absolute) });

@@ -16,7 +16,13 @@ namespace NossaTrip.view.pages.feed
             listView.ItemsSource = listContent;
 
             for (var i = 0; i < 100; i++)
-                listContent.Add(new FeedListItem { TxtContent = "cell " + i });
+                listContent.Add(new FeedListItem
+                {
+                    Url = "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-tech-guy.png",
+                    Name = "Leonardo Camilo",
+                    Likes = "12,442\npeople liked this",
+                    Time = "06:30 pm\nMay 16, 2017"
+                });
 
             listView.ItemTapped += (sender, e) => {
                 ((ListView)sender).SelectedItem = null;

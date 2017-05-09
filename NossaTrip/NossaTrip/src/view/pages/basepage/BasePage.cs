@@ -9,12 +9,12 @@ namespace NossaTrip.view.pages.basepage
     {
         public BasePage()
         {
-            Detail = new NavigationPage(new FeedPage());
+            Detail = new FeedPage();
             Master = new ContentPage
             {
                 Title = "NossaTrip",
                 BackgroundColor = Color.FromHex("#323232"),
-                Content = new OptionsStack()
+                Content = new OptionsStack(this)
             };
         }
     }

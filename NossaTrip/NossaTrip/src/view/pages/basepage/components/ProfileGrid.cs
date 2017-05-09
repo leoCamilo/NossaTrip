@@ -8,15 +8,9 @@ namespace NossaTrip.view.pages.basepage.components
         {
             ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(2, GridUnitType.Star) });
+            RowDefinitions.Add(new RowDefinition { Height = new GridLength(100, GridUnitType.Absolute) });
 
-            var name = new Label
-            {
-                // Text = "Hi Leonardo!",
-                // TextColor = Color.White,
-                // FontSize = 18,
-                VerticalTextAlignment = TextAlignment.Center
-            };
-
+            var name = new Label { VerticalTextAlignment = TextAlignment.Center };
             var name_fs = new FormattedString();
 
             name_fs.Spans.Add(new Span { Text = "Oi Leonardo!\n", FontSize = 18, ForegroundColor = Color.White });

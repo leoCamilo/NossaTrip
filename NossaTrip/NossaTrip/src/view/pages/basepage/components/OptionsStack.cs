@@ -4,10 +4,12 @@ namespace NossaTrip.view.pages.basepage.components
 {
     public class OptionsStack : StackLayout
     {
-        public OptionsStack()
+        private BasePage basePage;
+
+        public OptionsStack(BasePage basePage)
         {
             Children.Add(new ProfileGrid());
-            Children.Add(new OptionsList());
+            Children.Add(new OptionsList(basePage));
         }
     }
 }

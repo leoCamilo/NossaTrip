@@ -4,6 +4,8 @@ namespace NossaTrip.view.components
 {
     public static class FontAwsomeXamarin
     {
+        
+        public const string FAMapO = "\uf278";
         public const string FAGlass = "\uf000";
         public const string FAMusic = "\uf001";
         public const string FASearch = "\uf002";
@@ -12,6 +14,7 @@ namespace NossaTrip.view.components
         public const string FAStar = "\uf005";
         public const string FAStarO = "\uf006";
         public const string FAUser = "\uf007";
+        public const string FAUserO = "\uf2c0";
         public const string FAFilm = "\uf008";
         public const string FAThLarge = "\uf009";
         public const string FATh = "\uf00a";
