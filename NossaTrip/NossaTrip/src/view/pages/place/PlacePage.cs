@@ -7,34 +7,25 @@ namespace NossaTrip.view.pages.place
     {
         public PlacePage()
         {
-            Title = "Ceará, fortaleza - Brasil";
+            BackgroundColor = Color.FromHex("#565656");
 
             var paralax_bg = new Image
             {
                 Source = "http://blog.emania.com.br/content/uploads/2015/12/paisagem-tropical-wallpaper-1.jpg",
                 Aspect = Aspect.AspectFill,
-                HeightRequest = 200,
+                HeightRequest = 250,
                 HorizontalOptions = LayoutOptions.Fill
             };
 
-            var stack = new StackLayout();
-            var scrool = new ScrollView { Content = stack };
+            var stack = new StackLayout { Spacing = 10 };
+            var scrool = new PlaceScrollView (paralax_bg) { Content = stack };
 
             stack.Children.Add(new Frame { Content = paralax_bg, Padding = 0, HasShadow = false, CornerRadius = 0 });
+            stack.Children.Add(new PlaceMainData());
+            stack.Children.Add(new PlaceButtonsCard());
             stack.Children.Add(new DescriptionCard());
-            stack.Children.Add(new DescriptionCard());
-            stack.Children.Add(new DescriptionCard());
-            stack.Children.Add(new DescriptionCard());
-            stack.Children.Add(new DescriptionCard());
-            stack.Children.Add(new DescriptionCard());
-
-            scrool.Scrolled += (sender, e) =>
-            {
-                var imageHeight = paralax_bg.Height * 2;
-                var scrollRegion = paralax_bg.Height - scrool.Height;
-                var parallexRegion = imageHeight - scrool.Height;
-                paralax_bg.TranslationY = scrool.ScrollY - parallexRegion * (scrool.ScrollY / scrollRegion);
-            };
+            stack.Children.Add(new AddressCard());
+            stack.Children.Add(new PlaceInfo());
 
             Content = scrool;
         }

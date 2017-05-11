@@ -6,34 +6,19 @@ namespace NossaTrip.view.pages.place.components
     {
         public DescriptionCard()
         {
-            Padding = 0;
-            Margin = new Thickness(8, 4, 8, 4);
+            HasShadow = false;
+            CornerRadius = 0;
+            Padding = 15;
+            Margin = 0;
+            BackgroundColor = Color.FromHex("#323232");
 
-            var grid = new Grid
+            var contentLabel = new Label
             {
-                BackgroundColor = Color.FromHex("#dedede")
+                Text = "Manguinhos is a beach near Vitoria (30 Km) where you can find peace, nice people e good food. My advise is to get the beach in front of the Estação Primeira de Manguinhos (Vagão) - a nice restaurant builded from an old train wagon. To eat, the best place is the restaurant Enseada de Manguinhos (known as Geraldinho, the nickname of the boss). You must eat a Moqueca Capixaba with shrimp sauce and Pastel of shrimps by entries.",
+                TextColor = Color.White
             };
 
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(30, GridUnitType.Absolute) });
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-
-            var title_label = new Label
-            {
-                Text = "Description",
-                VerticalOptions = LayoutOptions.Center,
-                Margin = 5
-            };
-
-            var content_label = new Label
-            {
-                Text = "teste de texxto teste de texxto teste de texxtoteste de texxto teste de texxto teste de texxto teste de texxtoteste de texxtoteste de texxtoteste de texxtoteste de texxtoteste de texxtoteste de texxtoteste de texxtoteste de texxtoteste de texxtoteste de texxtoteste de texxtoteste de texxto",
-                Margin = 5
-            };
-
-            grid.Children.Add(title_label, 0, 0);
-            grid.Children.Add(content_label, 0, 1);
-
-            Content = grid;
+            Content = contentLabel;
         }
     }
 }

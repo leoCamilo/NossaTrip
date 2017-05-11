@@ -5,9 +5,17 @@ namespace NossaTrip.view.pages.feed.components
 {
     public class FeedListCell : ViewCell
     {
+        public static readonly BindableProperty PlaceProperty = BindableProperty.Create("Place", typeof(string), typeof(FeedListCell), "");
+
+        public string Place
+        {
+            get { return (string) GetValue(PlaceProperty); }
+            set { SetValue(PlaceProperty, value); }
+        }
 
         public FeedListCell()
         {
+            SetBinding(PlaceProperty, new Binding("TripPlace"));
 
             var grid = new Grid
             {
@@ -40,7 +48,7 @@ namespace NossaTrip.view.pages.feed.components
             };
 
             var trip_label_fs = new FormattedString();
-            var trip_span = new Span { Text = "Incrivel viagem a fortaleza em 5 dias Incrivel viagem a fortaleza em 5 dias Incrivel viagem a fortaleza em 5 dias Incrivel", FontSize = 14 };
+            var trip_span = new Span { Text = "Best trip USA ever!!", FontSize = 14 };
             trip_label_fs.Spans.Add(new Span { Text = "description:\n", FontSize = 10 });
             trip_label_fs.Spans.Add(trip_span);
             trip_label.FormattedText = trip_label_fs;
@@ -66,7 +74,7 @@ namespace NossaTrip.view.pages.feed.components
 
             var address_label_fs = new FormattedString();
             address_label_fs.Spans.Add(new Span { Text = "place:\n", FontSize = 10 });
-            address_label_fs.Spans.Add(new Span { Text = "Ceará, fortaleza - Brasil", FontSize = 14 });
+            address_label_fs.Spans.Add(new Span { Text = Place, FontSize = 14 });
             address_label.FormattedText = address_label_fs;
 
             var paid_label = new Label

@@ -53,7 +53,12 @@
     <Compile Include="src\view\pages\login\components\LoginEntry.cs" />
     <Compile Include="src\view\pages\login\LoginPage.cs" />
     <Compile Include="src\view\pages\PageTest.cs" />
+    <Compile Include="src\view\pages\place\components\AddressCard.cs" />
     <Compile Include="src\view\pages\place\components\DescriptionCard.cs" />
+    <Compile Include="src\view\pages\place\components\PlaceButtonsCard.cs" />
+    <Compile Include="src\view\pages\place\components\PlaceInfo.cs" />
+    <Compile Include="src\view\pages\place\components\PlaceMainData.cs" />
+    <Compile Include="src\view\pages\place\components\PlaceScrollView.cs" />
     <Compile Include="src\view\pages\place\PlacePage.cs" />
     <Compile Include="src\view\pages\basepage\BasePage.cs" />
     <Compile Include="src\view\pages\trip\components\TripDescriptionLabel.cs" />

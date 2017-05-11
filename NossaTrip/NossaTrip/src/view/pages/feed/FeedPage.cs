@@ -1,5 +1,4 @@
 ﻿using NossaTrip.view.pages.feed.components;
-using NossaTrip.view.pages.place;
 using NossaTrip.view.pages.trip;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
@@ -11,9 +10,10 @@ namespace NossaTrip.view.pages.feed
         public FeedPage()
         {
             var listContent = new ObservableCollection<FeedListItem>();
-            var listView = new FeedListView(ListViewCachingStrategy.RecycleElement);
-
-            listView.ItemsSource = listContent;
+            var listView = new FeedListView(ListViewCachingStrategy.RecycleElement)
+            {
+                ItemsSource = listContent
+            };
 
             for (var i = 0; i < 100; i++)
                 listContent.Add(new FeedListItem
@@ -21,6 +21,7 @@ namespace NossaTrip.view.pages.feed
                     Url = "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-tech-guy.png",
                     Name = "Leonardo Camilo",
                     Likes = "12,442\npeople liked this",
+                    TripPlace = "Ceará, fortaleza - Brasil",
                     Time = "06:30 pm\nMay 16, 2017"
                 });
 

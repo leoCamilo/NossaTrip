@@ -31,11 +31,9 @@ namespace NossaTrip.view.pages.basepage.components
 
         private void OptionsList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var item = sender as MenuListItem;
-
-            if (item != null)
+            if (sender is MenuListItem item)
             {
-                _dad.Detail = (Page) Activator.CreateInstance(item.PageType);
+                _dad.Detail = (Page)Activator.CreateInstance(item.PageType);
                 _dad.IsPresented = false;
             }
         }
