@@ -30,6 +30,12 @@ namespace NossaTrip.view.pages.feed
                 Navigation.PushModalAsync(new TripPage());
             };
 
+            var newBtn = new ToolbarItem { Text = "new trip" };
+
+            newBtn.Clicked += (sender, e) => Navigation.PushAsync(new NewTripPage());
+
+            ToolbarItems.Add(newBtn);
+
             BackgroundImage = "feed__bg.jpg";
             Content = listView;
         }

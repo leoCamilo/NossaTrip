@@ -69,9 +69,16 @@
     <Compile Include="src\view\pages\trip\components\TripScroll.cs" />
     <Compile Include="src\view\pages\trip\components\TripTagCard.cs" />
     <Compile Include="src\view\pages\trip\components\TripTagsCard.cs" />
+    <Compile Include="src\view\pages\trip\NewTripPage.cs" />
     <Compile Include="src\view\pages\trip\TripPage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Plugin.Media, Version=2.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Media.2.6.2\lib\portable-net45+wp80+win8+wpa81\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions, Version=2.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Media.2.6.2\lib\portable-net45+wp80+win8+wpa81\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.224\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
     </Reference>

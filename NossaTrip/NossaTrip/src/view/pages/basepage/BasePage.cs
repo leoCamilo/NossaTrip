@@ -1,6 +1,5 @@
 ﻿using NossaTrip.view.pages.basepage.components;
 using NossaTrip.view.pages.feed;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace NossaTrip.view.pages.basepage

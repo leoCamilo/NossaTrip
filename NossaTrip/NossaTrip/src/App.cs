@@ -1,5 +1,6 @@
 ﻿using NossaTrip.src.view.pages.login;
 using NossaTrip.view.pages.basepage;
+using Plugin.Media;
 using Xamarin.Forms;
 
 namespace NossaTrip
@@ -12,6 +13,7 @@ namespace NossaTrip
         public App()
         {
             // MainPage = new LoginPage();
+            CrossMedia.Current.Initialize();
             MainPage = new NavigationPage(new BasePage { Title = "NossaTrip" });
             // MainPage = new PlacePage();
         }
