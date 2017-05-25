@@ -146,8 +146,10 @@
     <Compile Include="src\view\customRenderers\TagLabelRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\FontAwesome.ttf" />
+    <AndroidAsset Include="Assets\fonts\FontAwesome.ttf" />
     <None Include="app.config" />
+    <AndroidAsset Include="Assets\fonts\Khula-Light.ttf" />
+    <AndroidAsset Include="Assets\fonts\Khula-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />

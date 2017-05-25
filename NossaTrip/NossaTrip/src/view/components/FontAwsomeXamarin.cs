@@ -4,7 +4,6 @@ namespace NossaTrip.view.components
 {
     public static class FontAwsomeXamarin
     {
-        
         public const string FAMapO = "\uf278";
         public const string FAGlass = "\uf000";
         public const string FAMusic = "\uf001";
@@ -385,10 +384,38 @@ namespace NossaTrip.view.components
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS: fontFamily = "FontAwesome"; break;
-                case Device.Android: fontFamily = "FontAwesome.ttf#FontAwesome"; break;
+                case Device.Android: fontFamily = "fonts/FontAwesome.ttf#FontAwesome"; break;
             }
 
             return fontFamily;
+        }
+
+        public static string GetKhulaFontName(bool light)
+        {
+            if (light)
+            {
+                var fontFamily = "Khula-Light";
+
+                switch (Device.RuntimePlatform)
+                {
+                    case Device.iOS: fontFamily = "Khula-Light"; break;
+                    case Device.Android: fontFamily = "fonts/Khula-Light.ttf#Khula-Light"; break;
+                }
+
+                return fontFamily;
+            }
+            else
+            {
+                var fontFamily = "Khula-Regular";
+
+                switch (Device.RuntimePlatform)
+                {
+                    case Device.iOS: fontFamily = "Khula-Regular"; break;
+                    case Device.Android: fontFamily = "fonts/Khula-Regular.ttf#Khula-Regular"; break;
+                }
+
+                return fontFamily;
+            }
         }
     }
 }

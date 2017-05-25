@@ -37,8 +37,13 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\App.cs" />
+    <Compile Include="src\control\controllers\feed\FeedController.cs" />
     <Compile Include="src\control\controllers\trip\TripController.cs" />
     <Compile Include="src\control\restful\user\UserRequester.cs" />
+    <Compile Include="src\global\ColorConstants.cs" />
+    <Compile Include="src\model\domain\place\Place.cs" />
+    <Compile Include="src\model\domain\trip\Comment.cs" />
+    <Compile Include="src\model\domain\trip\Trip.cs" />
     <Compile Include="src\model\domain\user\User.cs" />
     <Compile Include="src\model\json\user\UserJson.cs" />
     <Compile Include="src\model\net\ApiQueryMaker.cs" />
