@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\FontAwesome.ttf" />
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
