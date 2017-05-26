@@ -4,7 +4,7 @@ namespace NossaTrip.view.pages.trip.components
 {
     public class TripPageComment : Grid
     {
-        public TripPageComment(string comment)
+        public TripPageComment(string url, string name, string txt, string date)
         {
             Margin = new Thickness(20, 0);
 
@@ -13,7 +13,7 @@ namespace NossaTrip.view.pages.trip.components
 
             var avatar = new Image
             {
-                Source = "http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-tech-guy.png",
+                Source = url,
                 HeightRequest = 40,
                 WidthRequest = 40,
                 Margin = 10,
@@ -23,9 +23,9 @@ namespace NossaTrip.view.pages.trip.components
             var comment_label = new Label { TextColor = Color.White, Margin = new Thickness(0, 10, 0, 0) };
             var comment_label_fs = new FormattedString();
 
-            comment_label_fs.Spans.Add(new Span { Text = "Leonardo Camilo ", FontSize = 14, FontAttributes = FontAttributes.Bold });
-            comment_label_fs.Spans.Add(new Span { Text = comment, FontSize = 13, FontAttributes = FontAttributes.Italic, ForegroundColor = Color.FromHex("#EDEDED") });
-            comment_label_fs.Spans.Add(new Span { Text = "\n\n10/02/2017", FontSize = 10 });
+            comment_label_fs.Spans.Add(new Span { Text = name + " ", FontSize = 14, FontAttributes = FontAttributes.Bold });
+            comment_label_fs.Spans.Add(new Span { Text = txt, FontSize = 13, FontAttributes = FontAttributes.Italic, ForegroundColor = Color.FromHex("#EDEDED") });
+            comment_label_fs.Spans.Add(new Span { Text = "\n\n" + date, FontSize = 10 });
             comment_label.FormattedText = comment_label_fs;
 
             Children.Add(avatar, 0, 0);

@@ -6,18 +6,8 @@ namespace NossaTrip.view.pages.feed.components
 {
     public class FeedListCell : ViewCell
     {
-        public static readonly BindableProperty PlaceProperty = BindableProperty.Create("Place", typeof(string), typeof(FeedListCell), "");
-
-        public string Place
-        {
-            get { return (string) GetValue(PlaceProperty); }
-            set { SetValue(PlaceProperty, value); }
-        }
-
         public FeedListCell()
         {
-            SetBinding(PlaceProperty, new Binding("TripPlace"));
-
             var grid = new Grid
             {
                 BackgroundColor = ColorConstants.FeedCard,
@@ -67,7 +57,7 @@ namespace NossaTrip.view.pages.feed.components
 
             var address_label = new Label
             {
-                Margin = new Thickness(15, 5, 10, 10),
+                Margin = new Thickness(15, 5, 10, 20),
                 TextColor = ColorConstants.TextColor,
                 FontFamily = FontAwsomeXamarin.GetFontName(),
                 VerticalTextAlignment = TextAlignment.Start

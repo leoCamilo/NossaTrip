@@ -28,7 +28,7 @@ namespace NossaTrip.view.pages.trip.components
             }
         }
 
-        public TripMainData(string source)
+        public TripMainData(string source, string name, string address)
         {
             var bg_opacity = new BoxView
             {
@@ -50,21 +50,21 @@ namespace NossaTrip.view.pages.trip.components
 
             var fs = new FormattedString();
             
-            var name = new Span
+            var nameSpan = new Span
             {
-                Text = "Best U.S.A Trip =)\n",
+                Text = String.Format("{0}\n", name),
                 ForegroundColor = Color.White,
                 FontSize = 30
             };
 
-            var address = new Span {
-                Text = FontAwsomeXamarin.FAMapMarker + " New York, USA",
+            var addressSpan = new Span {
+                Text = String.Format("{0} {1}", FontAwsomeXamarin.FAMapMarker, address),
                 FontFamily = FontAwsomeXamarin.GetFontName(),
                 ForegroundColor = Color.White
             };
 
-            fs.Spans.Add(name);
-            fs.Spans.Add(address);
+            fs.Spans.Add(nameSpan);
+            fs.Spans.Add(addressSpan);
 
             var label = new Label { Margin = new Thickness(20, 0, 0, 0) };
 

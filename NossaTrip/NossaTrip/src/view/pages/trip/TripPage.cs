@@ -1,38 +1,35 @@
-﻿using NossaTrip.view.pages.trip.components;
+﻿using NossaTrip.global;
+using NossaTrip.model.domain.trip;
+using NossaTrip.view.pages.trip.components;
 using Xamarin.Forms;
 
 namespace NossaTrip.view.pages.trip
 {
     public class TripPage : ContentPage
     {
-        public TripPage()
+        public TripPage(Trip trip)
         {
             NavigationPage.SetHasNavigationBar(this, false);
 
-            var layout = new AbsoluteLayout { BackgroundColor = Color.FromHex("#323232") };
+            var layout = new AbsoluteLayout { BackgroundColor = ColorConstants.PrimaryColor };
             var info_list = new TripPageStackLayout();
-            var main_data = new TripMainData("https://s-media-cache-ak0.pinimg.com/originals/53/7b/3e/537b3e250746bb712510f81d1d241520.jpg");
+            var main_data = new TripMainData(trip.Url, trip.Name, trip.Address);
             var scroll = new TripScroll (main_data.Bg) { Content = info_list };
 
             info_list.Children.Add(main_data);
-            info_list.Children.Add(new TripDescriptionLabel("Conhecer Nova Iorque é um sonho, uma viagem onde você traz as histórias dos filmes para dentro de sua realidade. Tudo é muito incrível em Nova Yorque e existem inúmeros pontos turísticos.\n\nEm minha viagem aos Estados Unidos, eu me hospedei na cidade de Farfield que fica em um estado vizinho, chamado Connecticut.A cidade é pequena e linda, muito arborizada e muito bem cuidada, uma cidade com muitas residências e poucos comércios.\n\nMesmo sendo em outro estado, Farfield pertence a região metropolitana de Nova Yorque, então meu ponto de partida foi a Estação Central de Nova Yorque que por si só já é uma atração turística.\n\nA estação é muito grande e possui várias lojas, cafés e lanchonetes e lá eu encontrei também uma loja da Apple. Através desta estação é possível viajar para várias cidades dos Estados Unidos, com trens partindo de cinco em cinco."));
+            info_list.Children.Add(new TripDescriptionLabel(trip.Description));
 
             var tags_label = new Label
             {
-                Margin = new Thickness(20, 20, 0, 0),
                 Text = "tags:",
-                TextColor = Color.White
+                Margin = new Thickness(20, 20, 0, 0),
+                TextColor = ColorConstants.TextColor
             };
 
             info_list.Children.Add(tags_label);
-            info_list.Children.Add(new TripTagCard("cold"));
-            info_list.Children.Add(new TripTagCard("NYC"));
-            info_list.Children.Add(new TripTagCard("America"));
-            info_list.Children.Add(new TripTagCard("North America"));
-            info_list.Children.Add(new TripTagCard("USA"));
-            info_list.Children.Add(new TripTagCard("new york"));
 
-            // info_list.Children.Add(new TripTagsCard("cold|NYC|America|North America|USA|new york|city|metropole|people|stores"));
+            foreach (var tag in trip.Tags)
+                info_list.Children.Add(new TripTagCard(tag));
 
             var places_label = new Label
             {
@@ -73,13 +70,8 @@ namespace NossaTrip.view.pages.trip
 
             info_list.Children.Add(comments_label);
 
-            var comment = "comentário legal sobre algo da viagem";
-
-            for (int i = 0; i < 5; i++)
-            {
-                info_list.Children.Add(new TripPageComment(comment));
-                comment += comment;
-            }
+            foreach (var comment in trip.Comments)
+                info_list.Children.Add(new TripPageComment (comment.Commenter.Url, comment.Commenter.Name, comment.Txt, comment.Date));
 
             info_list.Children.Add(new Entry { Placeholder = "comment...", PlaceholderColor = Color.FromHex("#ededed"), TextColor = Color.White });
 
