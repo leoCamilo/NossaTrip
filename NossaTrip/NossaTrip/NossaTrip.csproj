@@ -51,6 +51,7 @@
     <Compile Include="src\model\net\QueryFactory.cs" />
     <Compile Include="src\model\net\Rest.cs" />
     <Compile Include="src\view\components\CardView.cs" />
+    <Compile Include="src\view\components\entry\ColorEntry.cs" />
     <Compile Include="src\view\components\FontAwsomeXamarin.cs" />
     <Compile Include="src\view\pages\basepage\components\MenuListCell.cs" />
     <Compile Include="src\view\pages\basepage\components\MenuListItem.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="src\view\pages\place\components\PlaceScrollView.cs" />
     <Compile Include="src\view\pages\place\PlacePage.cs" />
     <Compile Include="src\view\pages\basepage\BasePage.cs" />
+    <Compile Include="src\view\pages\registration\RegistrationPage.cs" />
     <Compile Include="src\view\pages\trip\components\TripDescriptionLabel.cs" />
     <Compile Include="src\view\pages\trip\components\TripMainData.cs" />
     <Compile Include="src\view\pages\trip\components\TripPageComment.cs" />
@@ -81,7 +83,10 @@
     <Compile Include="src\view\pages\trip\components\TripScroll.cs" />
     <Compile Include="src\view\pages\trip\components\TripTagCard.cs" />
     <Compile Include="src\view\pages\trip\components\TripTagsCard.cs" />
-    <Compile Include="src\view\pages\trip\NewTripPage.cs" />
+    <Compile Include="src\view\pages\trip\insert\components\NewTripEntry.cs" />
+    <Compile Include="src\view\pages\trip\insert\components\NewTripTag.cs" />
+    <Compile Include="src\view\pages\trip\insert\NewTripPage.cs" />
+    <Compile Include="src\view\pages\trip\insert\UploadImgPage.cs" />
     <Compile Include="src\view\pages\trip\TripPage.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -116,7 +121,10 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="src\view\pages\registration\components\" />
+    <Folder Include="src\view\pages\trip\view\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

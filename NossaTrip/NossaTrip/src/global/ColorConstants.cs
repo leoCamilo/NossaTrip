@@ -12,5 +12,8 @@ namespace NossaTrip.global
         public readonly static Color FeedCardAvaliationBad = Color.Gray;
         public readonly static Color FeedCardAvaliationMedium = Color.FromHex("#e4f450");
         public readonly static Color FeedCardAvaliationGood = Color.FromHex("#52a43a");
+
+        public readonly static Color NewTripBackground = Color.FromRgb(65, 65, 65);
+        public readonly static Color NewTripFontColor = Color.FromRgb(200, 200, 200);
     }
 }

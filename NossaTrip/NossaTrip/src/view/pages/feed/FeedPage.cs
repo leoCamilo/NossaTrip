@@ -3,6 +3,7 @@ using NossaTrip.global;
 using NossaTrip.model.domain.trip;
 using NossaTrip.view.pages.feed.components;
 using NossaTrip.view.pages.trip;
+using NossaTrip.view.pages.trip.insert;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
