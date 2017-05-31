@@ -1,4 +1,5 @@
-﻿using NossaTrip.view.components;
+﻿using NossaTrip.model.domain.place;
+using NossaTrip.view.components;
 using NossaTrip.view.pages.place;
 using Xamarin.Forms;
 
@@ -6,7 +7,7 @@ namespace NossaTrip.view.pages.trip.components
 {
     public class TripPlaceCard : Grid
     {
-        public TripPlaceCard(string place, string url)
+        public TripPlaceCard(Place trip)
         {
             BackgroundColor = Color.FromHex("#ededed");
 
@@ -19,24 +20,15 @@ namespace NossaTrip.view.pages.trip.components
             RowDefinitions.Add(new RowDefinition { Height = new GridLength(120, GridUnitType.Absolute) });
             RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
 
-            var img = new Image
-            {
-                Source = url,
-                Aspect = Aspect.AspectFill
-            };
+            var img = new Image { Source = trip.Url, Aspect = Aspect.AspectFill };
+            var name = new Label { Text = trip.Name, Margin = 6 };
 
             var likes = new Label
             {
-                Text = FontAwsomeXamarin.FAHeartO + " 1,231",
+                Text = FontAwsomeXamarin.FAHeartO + " " + trip.Likes,
                 FontFamily = FontAwsomeXamarin.GetFontName(),
-                Margin = 6,
                 HorizontalTextAlignment = TextAlignment.End,
-                FontSize = 15
-            };
-
-            var name = new Label
-            {
-                Text = place,
+                FontSize = 15,
                 Margin = 6
             };
 

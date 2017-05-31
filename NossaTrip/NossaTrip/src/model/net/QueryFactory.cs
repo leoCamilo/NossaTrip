@@ -11,5 +11,19 @@
 
             return query;
         }
+
+        public static ApiQueryMaker AllTrips()
+        {
+            return new ApiQueryMaker(QueryType.AllTrips);
+        }
+
+        public static ApiQueryMaker TripById(int id)
+        {
+            var query = new ApiQueryMaker(QueryType.TripById);
+
+            query.AddParameter("id", id.ToString());
+
+            return query;
+        }
     }
 }

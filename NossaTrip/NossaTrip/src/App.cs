@@ -7,11 +7,13 @@ namespace NossaTrip
 {
     public class App : Application
     {
+        public static bool StaticData { get; set; }
         public static double ScreenWidth { get; set; }
         public static double ScreenHeight { get; set; }
 
         public App()
         {
+            StaticData = true;
             // MainPage = new LoginPage();
             CrossMedia.Current.Initialize();
             MainPage = new NavigationPage(new BasePage { Title = "NossaTrip" });

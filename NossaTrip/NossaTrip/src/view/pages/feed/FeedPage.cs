@@ -25,7 +25,9 @@ namespace NossaTrip.view.pages.feed
 
             listView.ItemTapped += (sender, e) => {
                 ((ListView)sender).SelectedItem = null;
-                Navigation.PushModalAsync(new TripPage(((FeedListItem)e.Item).Trip));
+                var trip = FeedController.GetTrip(((FeedListItem)e.Item).Trip.Id);
+                var result = trip.Result;
+                Navigation.PushModalAsync(new TripPage(result));
             };
 
             var newBtn = new ToolbarItem { Text = "new trip" };
