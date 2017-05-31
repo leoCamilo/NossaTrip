@@ -1,5 +1,5 @@
 # NossaTrip
-This app is builted using [Xamarin Framework](https://www.xamarin.com/), during the graduation, the main goal of this app is a trip experience share environment, for people that live trips.
+This app was builted using [Xamarin Framework](https://www.xamarin.com/), during the graduation, the main goal of this app is to be a trip experience share environment, for people that love trips.
 
 Documentation can be found in the [GitBook](https://www.gitbook.com/book/leocamilo/trabalho-les/details)
 
