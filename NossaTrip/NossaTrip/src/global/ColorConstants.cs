@@ -5,7 +5,7 @@ namespace NossaTrip.global
     public static class ColorConstants
     {
         public readonly static Color PrimaryColor = Color.FromHex("#323232");
-        public readonly static Color TextColor = Color.FromRgb(245, 245, 245);
+        public readonly static Color TextColor = Color.FromHex("#F5F5F5");
         public readonly static Color FeedCard = Color.FromRgb(65, 65, 65);
         public readonly static Color FeedBackground = Color.FromRgb(80, 80, 80);
 

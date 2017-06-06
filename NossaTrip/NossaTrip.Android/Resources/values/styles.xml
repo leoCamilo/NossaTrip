@@ -14,7 +14,7 @@
     <item name="windowActionBar">false</item>
     <item name="colorPrimary">#323232</item>
     <item name="colorPrimaryDark">#323232</item>
-    <item name="colorAccent">#FF4081</item>
+    <item name="colorAccent">#F5F5F5</item>
     <item name="windowActionModeOverlay">true</item>
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
     <item name="android:buttonStyle">@style/NoShadowButton</item>

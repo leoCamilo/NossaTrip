@@ -12,13 +12,10 @@ namespace NossaTrip.view.pages.trip.insert
         {
             BackgroundColor = ColorConstants.NewTripBackground;
 
-            var cancelBtn = new ToolbarItem { Text = "cancel" };
-            var saveBtn = new ToolbarItem { Text = "next" };
+            var saveBtn = new ToolbarItem { Icon = ImgConstants.Next };
             var grid = new Grid { Padding = 20 };
 
             saveBtn.Clicked += (sender, e) => Navigation.PushAsync(new UploadImgPage());
-
-            ToolbarItems.Add(cancelBtn);
             ToolbarItems.Add(saveBtn);
 
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
