@@ -2,7 +2,7 @@
 {
     public static class StaticJsonData
     {
-        public static string feedJson = @"{
+        public static string FeedJson = @"{
 	        'success': 1,
  	        'error': 'null',
  	        'trips': [
@@ -95,6 +95,92 @@
 			        'rate': 8000,
 			        'id_trip': 9,
 			        'create_time': '22:00 pm\nMay 20, 2017'
+		        }
+	        ]
+        }";
+
+        public static string FavoritesTripJson = @"{
+	        'success': 1,
+ 	        'error': 'null',
+ 	        'trips': [
+		        {
+			        'url_user_picture': 'https://pickaface.net/gallery/avatar/unr_avatar1_160809_2337_c8c0.png',
+			        'title': 'Best trip usa!!!',
+			        'name_user': 'Leonardo Camilo',
+			        'short_route': 'New york, USA',
+			        'rate': 1250,
+			        'id_trip': 1,
+			        'create_time': '09:00 pm\nMay 17, 2017'
+		        },
+		        {
+			        'url_user_picture': 'http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-ginger-guy.png',
+			        'title': 'Tailândia, uma grande surpresa, ótimo país',
+			        'name_user': 'Gustavo Grimaldi',
+			        'short_route': 'Tailândia',
+			        'rate': 1250,
+			        'id_trip': 3,
+			        'create_time': '09:00 pm\nMay 18, 2017'
+		        },
+		        {
+			        'url_user_picture': 'http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-rapper-guy.png',
+			        'title': 'Tudo sobre a espanha em 1 semana',
+			        'name_user': 'Jordan Kau Lyrio',
+			        'short_route': 'Spain',
+			        'rate': 200,
+			        'id_trip': 4,
+			        'create_time': '17:45 pm\nMay 18, 2017'
+		        },
+                {
+			        'url_user_picture': 'http://bootdey.com/img/Content/avatar/avatar5.png',
+			        'title': 'Sampa e seus segredos',
+			        'name_user': 'Fabrini do Amaral',
+			        'short_route': 'São Paulo, Brasil',
+			        'rate': 378,
+			        'id_trip': 6,
+			        'create_time': '17:45 pm\nMay 19, 2017'
+		        },
+		        {
+			        'url_user_picture': 'http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-ginger-guy.png',
+			        'title': 'Rock in Rio, melhor show da vida',
+			        'name_user': 'Gustavo Grimaldi',
+			        'short_route': 'Rio de Janeiro, Brasil',
+			        'rate': 700,
+			        'id_trip': 7,
+			        'create_time': '22:00 pm\nMay 20, 2017'
+		        },		        
+                {
+			        'url_user_picture': 'https://s-media-cache-ak0.pinimg.com/736x/7f/79/6d/7f796d57218d9cd81a92d9e6e8e51ce4.jpg',
+			        'title': 'Canada > USA',
+			        'name_user': 'Suellen Silva',
+			        'short_route': 'Canada',
+			        'rate': 2000,
+			        'id_trip': 5,
+			        'create_time': '17:45 pm\nMay 18, 2017'
+		        }
+	        ]
+        }";
+
+        public static string MyTripsJson = @"{
+	        'success': 1,
+ 	        'error': 'null',
+ 	        'trips': [
+		        {
+			        'url_user_picture': 'http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-tech-guy.png',
+			        'title': 'Best trip usa!!!',
+			        'name_user': 'Leonardo Camilo',
+			        'short_route': 'New york, USA',
+			        'rate': 1250,
+			        'id_trip': 1,
+			        'create_time': '09:00 pm\nMay 17, 2017'
+		        },
+		        {
+			        'url_user_picture': 'http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-tech-guy.png',
+			        'title': 'O Acre existe msm?',
+			        'name_user': 'Leonardo Camilo',
+			        'short_route': 'Acre, Narnia',
+			        'rate': 0,
+			        'id_trip': 8,
+			        'create_time': '17:45 pm\nMay 20, 2017'
 		        }
 	        ]
         }";

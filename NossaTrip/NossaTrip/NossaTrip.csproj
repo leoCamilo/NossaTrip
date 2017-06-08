@@ -39,11 +39,13 @@
     <Compile Include="src\App.cs" />
     <Compile Include="src\control\controllers\feed\FeedController.cs" />
     <Compile Include="src\control\controllers\trip\TripController.cs" />
+    <Compile Include="src\control\page\ScreenController.cs" />
     <Compile Include="src\control\restful\feed\FeedRequester.cs" />
     <Compile Include="src\control\restful\trip\TripRequester.cs" />
     <Compile Include="src\control\restful\user\UserRequester.cs" />
     <Compile Include="src\global\ColorConstants.cs" />
     <Compile Include="src\global\ImgConstants.cs" />
+    <Compile Include="src\global\StrConstants.cs" />
     <Compile Include="src\model\domain\place\Place.cs" />
     <Compile Include="src\model\domain\trip\Comment.cs" />
     <Compile Include="src\model\domain\trip\Trip.cs" />
@@ -64,14 +66,16 @@
     <Compile Include="src\view\pages\basepage\components\OptionsList.cs" />
     <Compile Include="src\view\pages\basepage\components\OptionsStack.cs" />
     <Compile Include="src\view\pages\basepage\components\ProfileGrid.cs" />
+    <Compile Include="src\view\pages\config\ConfigPage.cs" />
+    <Compile Include="src\view\pages\favorites\FavoritesPage.cs" />
     <Compile Include="src\view\pages\feed\components\FeedListCell.cs" />
     <Compile Include="src\view\pages\feed\components\FeedListItem.cs" />
     <Compile Include="src\view\pages\feed\components\FeedListView.cs" />
     <Compile Include="src\view\pages\feed\FeedPage.cs" />
+    <Compile Include="src\view\pages\feed\MyTripsPage.cs" />
     <Compile Include="src\view\pages\login\components\CustomShape.cs" />
     <Compile Include="src\view\pages\login\components\LoginEntry.cs" />
     <Compile Include="src\view\pages\login\LoginPage.cs" />
-    <Compile Include="src\view\pages\PageTest.cs" />
     <Compile Include="src\view\pages\place\components\AddressCard.cs" />
     <Compile Include="src\view\pages\place\components\DescriptionCard.cs" />
     <Compile Include="src\view\pages\place\components\PlaceButtonsCard.cs" />
@@ -80,6 +84,9 @@
     <Compile Include="src\view\pages\place\components\PlaceScrollView.cs" />
     <Compile Include="src\view\pages\place\PlacePage.cs" />
     <Compile Include="src\view\pages\basepage\BasePage.cs" />
+    <Compile Include="src\view\pages\profile\components\ProfileEntry.cs" />
+    <Compile Include="src\view\pages\profile\components\ProfileLabel.cs" />
+    <Compile Include="src\view\pages\profile\ProfilePage.cs" />
     <Compile Include="src\view\pages\registration\RegistrationPage.cs" />
     <Compile Include="src\view\pages\trip\components\TripDescriptionLabel.cs" />
     <Compile Include="src\view\pages\trip\components\TripMainData.cs" />
@@ -97,7 +104,7 @@
     <Compile Include="src\view\pages\trip\insert\components\UploadImgLabelInstruction.cs" />
     <Compile Include="src\view\pages\trip\insert\NewTripPage.cs" />
     <Compile Include="src\view\pages\trip\insert\UploadImgPage.cs" />
-    <Compile Include="src\view\pages\trip\TripPage.cs" />
+    <Compile Include="src\view\pages\trip\view\TripPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -133,7 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\view\pages\registration\components\" />
-    <Folder Include="src\view\pages\trip\view\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

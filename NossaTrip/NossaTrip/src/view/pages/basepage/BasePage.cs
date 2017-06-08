@@ -1,5 +1,6 @@
-﻿using NossaTrip.view.pages.basepage.components;
-using NossaTrip.view.pages.feed;
+﻿using NossaTrip.control.page;
+using NossaTrip.global;
+using NossaTrip.view.pages.basepage.components;
 using Xamarin.Forms;
 
 namespace NossaTrip.view.pages.basepage
@@ -8,14 +9,13 @@ namespace NossaTrip.view.pages.basepage
     {
         public BasePage()
         {
-            Detail = new FeedPage();
+            Detail = ScreenController.Instance.GetPage(AppPage.Feed);
             Master = new ContentPage
             {
-                Title = "NossaTrip",
-                BackgroundColor = Color.FromHex("#323232"),
+                Title = StrConstants.AppName,
+                BackgroundColor = ColorConstants.PrimaryColor,
                 Content = new OptionsStack(this)
             };
         }
     }
 }
-

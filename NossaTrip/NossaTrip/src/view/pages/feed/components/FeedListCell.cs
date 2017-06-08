@@ -17,7 +17,7 @@ namespace NossaTrip.view.pages.feed.components
 
             var card = new CardView
             {
-                Margin = new Thickness(15, 12, 15, 0),
+                Margin = new Thickness(15, 7, 15, 5),
                 CornerRadius = 10,
                 Padding = 0
             };

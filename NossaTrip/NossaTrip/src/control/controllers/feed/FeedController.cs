@@ -28,11 +28,35 @@ namespace NossaTrip.control.controllers.feed
         {
             if (App.StaticData)
             {
-                return TripFeedJson.Serialize(StaticJsonData.feedJson);
+                return TripFeedJson.Serialize(StaticJsonData.FeedJson);
             }
             else
             {
-                return TripFeedJson.Serialize(await FeedRequester.GetAllTrips(QueryFactory.AllTrips()));
+                return await FeedRequester.GetTrips(QueryFactory.AllTrips());
+            }
+        }
+
+        public async static Task<IList<Trip>> GetFavoritesTrips()
+        {
+            if (App.StaticData)
+            {
+                return TripFeedJson.Serialize(StaticJsonData.FavoritesTripJson);
+            }
+            else
+            {
+                return await FeedRequester.GetTrips(QueryFactory.FavoriteTrips());
+            }
+        }
+
+        public async static Task<IList<Trip>> GetMyTrips()
+        {
+            if (App.StaticData)
+            {
+                return TripFeedJson.Serialize(StaticJsonData.MyTripsJson);
+            }
+            else
+            {
+                return await FeedRequester.GetTrips(QueryFactory.MyTrips());
             }
         }
     }

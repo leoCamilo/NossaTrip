@@ -17,6 +17,16 @@
             return new ApiQueryMaker(QueryType.AllTrips);
         }
 
+        public static ApiQueryMaker MyTrips()
+        {
+            return new ApiQueryMaker(QueryType.UserTrips); // TODO: correct route
+        }
+
+        public static ApiQueryMaker FavoriteTrips()
+        {
+            return new ApiQueryMaker(QueryType.FollowTrip); // TODO: correct route
+        }
+
         public static ApiQueryMaker TripById(int id)
         {
             var query = new ApiQueryMaker(QueryType.TripById);

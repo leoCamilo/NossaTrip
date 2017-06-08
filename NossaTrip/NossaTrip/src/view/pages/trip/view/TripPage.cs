@@ -3,7 +3,7 @@ using NossaTrip.model.domain.trip;
 using NossaTrip.view.pages.trip.components;
 using Xamarin.Forms;
 
-namespace NossaTrip.view.pages.trip
+namespace NossaTrip.view.pages.trip.view
 {
     public class TripPage : ContentPage
     {
